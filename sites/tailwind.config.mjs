@@ -10,11 +10,18 @@ export default {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      black: "#000000",
-      white: "#ffffff",
+      black: "#212121",
+      white: "#f5f5f5",
       gray: colors.gray,
       indigo: colors.indigo,
       neutral: colors.neutral,  // Used mainly for text color
+      green: {
+        30: "#1f7a1f",
+        40: "#29a329",
+        50: "#33cc33",
+        60: "#5cd65c",
+        70: "#85e085",
+      },
       yellow: {
         50: "#fefce8",
         100: "#fef9c3",

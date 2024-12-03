@@ -2,9 +2,9 @@
 :root {
     --border: hsla(var(--border-neutral), .4);
     --backdrop-color: #272727cc;
-    --sl-color-accent: #ff801f;
-    --sl-color-accent-high: #ffa057;
-    --sl-color-accent-low: #562800;
+    --sl-color-accent: #33cc33;
+    --sl-color-accent-high: #70db70;
+    --sl-color-accent-low: #212121;
     --sl-color-black: #181818;
     --sl-color-gray-1: #eee;
     --sl-color-gray-2: #c2c2c2;
@@ -13,17 +13,17 @@
     --sl-color-gray-5: #383838;
     --sl-color-gray-6: #272727;
     --sl-color-white: #fff;
-    --list-marker-color: #fb923c;
+    --list-marker-color: #33cc33;
     --border-neutral: 0, 0%, 25.1%;
 }
 
 /* Light mode colors. */
 :root[data-theme="light"] {
     --border: hsla(var(--border-yellow), .4);
-    --backdrop-color: #f6f6f699;
-    --sl-color-accent: #b73d00;
-    --sl-color-accent-high: #562800;
-    --sl-color-accent-low: #ffa057;
+    --backdrop-color: #f6f6f6cc;
+    --sl-color-accent: #33cc33;
+    --sl-color-accent-high: #70db70;
+    --sl-color-accent-low: #f5f5f5;
     --sl-color-black: #fff;
     --sl-color-gray-1: #272727;
     --sl-color-gray-2: #383838;
@@ -32,8 +32,8 @@
     --sl-color-gray-5: #c2c2c2;
     --sl-color-gray-6: #eee;
     --sl-color-gray-7: #f6f6f6;
-    --sl-color-white: #181818;
-    --list-marker-color: #fb923c;
+    --sl-color-white: #212121;
+    --list-marker-color: #33cc33;
     --border-yellow: 54.9, 96.7%, 88%;
 
 }
@@ -55,17 +55,17 @@ header > div:first-of-type {
     backdrop-filter: blur(12px) !important;
     background-color: var(--backdrop-color) !important;
     border: 1px var(--border) solid;
-    border-radius: 36px;
+    border-radius: 16px;
     height: 100% !important;
     margin-inline: auto !important;
     margin-top: 1rem !important;
     max-width: 1536px;
-    padding-inline: 2rem !important;
+    padding-inline: 1rem !important;
     width: auto !important;
 }
 
 #starlight__sidebar {
-    border-radius: 1rem;
+    border-radius: none;
     margin-top: 2rem !important;
 }
 
@@ -83,7 +83,7 @@ header > div:first-of-type {
 
 mobile-starlight-toc > nav {
     border: none !important;
-    border-radius: 1rem;
+    border-radius: none;
     margin-top: 2rem !important;
 }
 
@@ -97,7 +97,7 @@ select:focus-visible {
 }
 
 article.card {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
 .starlight-aside--tip {
@@ -154,12 +154,17 @@ article.card {
 
 @media screen and (max-width: 800px) {
     mobile-starlight-toc > nav {
-        border-radius: 1rem;
-        margin-top: 3rem !important;
+        backdrop-filter: blur(12px) !important;
+        background-color: var(--backdrop-color);
+        border-radius: 16px;
+        margin-top: 2.5rem !important;
+        margin-inline: auto !important;
+        right: 2rem;
+        left: 2rem;
     }
 
     header > div:first-of-type {
-        padding-inline-end: 5rem !important;
+        padding-inline-end: 4rem !important;
     }
 
     starlight-menu-button > button {
@@ -170,6 +175,6 @@ article.card {
 
 @media screen and (max-width: 1280px) {
     header.header {
-        padding-inline: 1.5rem !important;
+        padding-inline: 2rem !important;
     }
 }
