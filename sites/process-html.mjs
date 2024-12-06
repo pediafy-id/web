@@ -12,12 +12,13 @@ await Promise.all(
    	 let html = await fs.readFile(file, 'utf-8')
 
    	 // Minify the HTML
-   	 html = await minify(html, {
+   	 const minifiedHtml = await minify(html, 
+		{
    		 removeComments: true,
    		 preserveLineBreaks: true,
    		 collapseWhitespace: true,
 		 minifyJS: true
-   	 })
-   	 await fs.writeFile(file, html)
+   	 });
+   	 await fs.writeFile(file, minifiedHtml)
     })
 )
