@@ -4,13 +4,16 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@content/*": ["src/content/*"],
-      "@data/*": ["src/data_files/*"],
-      "@images/*": ["src/images/*"],
-      "@scripts/*": ["src/assets/scripts/*"],
-      "@styles/*": ["src/assets/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@components/*": ["src/components/*.{ts,tsx}"],
+      "@content/*": ["src/content/*.{ts,tsx}"],
+      "@data/*": ["src/data_files/*.{ts,tsx}"],
+      "@images/*": ["src/images/*.{ts,tsx}"],
+      "@scripts/*": ["src/assets/scripts/*.{ts,tsx}"],
+      "@styles/*": ["src/assets/styles/*.{ts,scss,css}"],
+      "@utils/*": ["src/utils/*.{ts,tsx}"]
     },
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
   }
 }
